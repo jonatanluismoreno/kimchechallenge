@@ -1,22 +1,32 @@
-import React from "react";
-import "./App.css";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "@apollo/react-hooks";
+import React, { useState, useRef } from "react";
+import useFilteredData from "./hooks/useFilteredData";
 
-const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io",
-});
+function App() {
+  const [inputContent, setInputContent] = useState("");
+  const { results, error, loading } = useFilteredData(inputContent);
+  const inputRef = useRef(null);
 
-const App = () => (
-  <ApolloProvider client={client}>
+  const handleChange = (event) => {
+    event.preventDefault();
+    if (inputRef.current.value) {
+      setInputContent(inputRef.current.value);
+    } else {
+      setInputContent("");
+    }
+  };
+  if (loading || error) {
+    return <p>{error ? error.message : "Loading..."}</p>;
+  }
+  return (
     <div>
-      <h2>
-        My first Apollo app{" "}
-        <span role="img" aria-label="Rocket">
-          🚀
-        </span>
-      </h2>
+      <input
+        ref={inputRef}
+        className="input"
+        type="text"
+        placeholder="Search for a country"
+        onChange={handleChange}
+      ></input>
     </div>
-  </ApolloProvider>
-);
+  );
+}
 export default App;
