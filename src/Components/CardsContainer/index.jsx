@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Category from "../Category";
 
 const StyledCardsContainer = styled.div``;
 
@@ -10,12 +11,12 @@ const CardsContainer = ({ content }) => {
         content
           .filter(({ countries }) => countries.length)
           .map((c) => (
-            <ul className="ul">
-              {c.name}
-              {c.countries.map((b) => (
-                <li className="li">{b.name}</li>
-              ))}
-            </ul>
+            <Category
+              name={c.name}
+              countries={c.countries}
+              id={c.name}
+              key={c.name}
+            />
           ))}
     </StyledCardsContainer>
   );

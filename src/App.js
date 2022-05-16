@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import useFilteredData from "./hooks/useFilteredData";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
@@ -18,7 +18,12 @@ function App() {
   return (
     <>
       <Header setInputContent={setInputContent} />
-      <Main error={error} loading={loading} toggleSearchBy={toggleSearchBy} />
+      <Main
+        error={error}
+        loading={loading}
+        toggleSearchBy={toggleSearchBy}
+        content={results}
+      />
     </>
   );
 }
