@@ -72,7 +72,19 @@ const useFilteredData = (inputContent, showByContinent) => {
         }));
       }
     }
-  }, [inputContent, data, dataCont, dataLang]);
+  }, [
+    inputContent,
+    data,
+    dataCont,
+    dataLang,
+    error,
+    errorCont,
+    errorLang,
+    loading,
+    loadingCont,
+    loadingLang,
+    showByContinent,
+  ]);
   return { results, loading, error };
 };
 
