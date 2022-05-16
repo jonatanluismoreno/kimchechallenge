@@ -15,10 +15,8 @@ const StyledInput = styled.input`
 const Input = ({ inputRef, placeholder, handleChange }) => {
   return (
     <StyledInput
-      ref={inputRef}
-      className="input"
       type="text"
-      placeholder="Search for a country"
+      placeholder={placeholder}
       onChange={handleChange}
     />
   );
