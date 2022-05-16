@@ -1,32 +1,25 @@
 import React, { useState, useRef } from "react";
 import useFilteredData from "./hooks/useFilteredData";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
 
 function App() {
   const [inputContent, setInputContent] = useState("");
-  const { results, error, loading } = useFilteredData(inputContent);
-  const inputRef = useRef(null);
+  const [showByContinent, setShowByContinent] = useState(true);
+  const { results, error, loading } = useFilteredData(
+    inputContent,
+    showByContinent
+  );
 
-  const handleChange = (event) => {
-    event.preventDefault();
-    if (inputRef.current.value) {
-      setInputContent(inputRef.current.value);
-    } else {
-      setInputContent("");
-    }
+  const toggleSearchBy = () => {
+    setShowByContinent(!showByContinent);
   };
-  if (loading || error) {
-    return <p>{error ? error.message : "Loading..."}</p>;
-  }
+
   return (
-    <div>
-      <input
-        ref={inputRef}
-        className="input"
-        type="text"
-        placeholder="Search for a country"
-        onChange={handleChange}
-      ></input>
-    </div>
+    <>
+      <Header setInputContent={setInputContent} />
+      <Main error={error} loading={loading} toggleSearchBy={toggleSearchBy} />
+    </>
   );
 }
 export default App;

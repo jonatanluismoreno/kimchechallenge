@@ -27,12 +27,19 @@ const StyledImage = styled.img`
   opacity: 0.5;
 `;
 
-const Form = () => {
+const Form = ({ setInputContent }) => {
+  const handleChange = (event) => {
+    event.preventDefault();
+    if (event.target.value) {
+      setInputContent(event.target.value);
+      console.log(event.target.value);
+    }
+  };
   return (
     <StyledForm>
       <StyledInputContainer>
         <StyledImage src={searchicon} alt="search icon" />
-        <Input placeholder="Search for a country" />
+        <Input placeholder="Search for a country" handleChange={handleChange} />
       </StyledInputContainer>
     </StyledForm>
   );

@@ -11,9 +11,8 @@ const StyledButton = styled.button`
   font-size: 17px;
 `;
 
-const Button = ({ handleButton }) => {
-  return;
-  <StyledButton onClick={handleButton} />;
+const Button = ({ handleButton, children }) => {
+  return <StyledButton onClick={handleButton}>{children} </StyledButton>;
 };
 
 export default Button;

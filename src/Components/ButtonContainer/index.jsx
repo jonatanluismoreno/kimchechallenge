@@ -14,8 +14,8 @@ const StyledButtonContainer = styled.div`
 const ButtonContainer = ({ handleButton }) => {
   return (
     <StyledButtonContainer>
-      <Button handleButton={handleButton} />
-      <Button handleButton={handleButton} />
+      <Button handleButton={handleButton}>Continent</Button>
+      <Button handleButton={handleButton}>Language</Button>
     </StyledButtonContainer>
   );
 };

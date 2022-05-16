@@ -5,10 +5,10 @@ import Form from "../Form";
 
 const StyledHeader = styled.header``;
 
-const Header = () => {
+const Header = ({ setInputContent }) => {
   return (
     <StyledHeader>
-      <Form />
+      <Form setInputContent={setInputContent} />
     </StyledHeader>
   );
 };
