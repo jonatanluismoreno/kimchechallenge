@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Category from "../Category";
 
-const StyledCardsContainer = styled.div``;
+const StyledCategoryContainer = styled.div``;
 
-const CardsContainer = ({ content }) => {
+const CategoryContainer = ({ content }) => {
   return (
-    <StyledCardsContainer>
+    <StyledCategoryContainer>
       {content &&
         content
           .filter(({ countries }) => countries.length)
@@ -18,8 +18,8 @@ const CardsContainer = ({ content }) => {
               key={c.name}
             />
           ))}
-    </StyledCardsContainer>
+    </StyledCategoryContainer>
   );
 };
 
-export default CardsContainer;
+export default CategoryContainer;
