@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledInput = styled.input`
+  font-family: "Titillium Web", sans-serif;
   background-color: transparent;
   flex: 1 1 auto;
   font-size: 14px;
