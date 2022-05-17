@@ -7,7 +7,7 @@ const StyledForm = styled.form`
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 32px;
   width: 319px;
-  margin-top: 32px;
+  margin: 32px 0;
   background-color: aliceblue;
 `;
 
@@ -33,6 +33,8 @@ const Form = ({ setInputContent }) => {
     if (event.target.value) {
       setInputContent(event.target.value);
       console.log(event.target.value);
+    } else {
+      setInputContent("");
     }
   };
   return (

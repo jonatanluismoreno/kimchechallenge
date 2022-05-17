@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledInput = styled.input`
+  font-family: "Titillium Web", sans-serif;
   background-color: transparent;
   flex: 1 1 auto;
   font-size: 14px;
@@ -10,9 +11,12 @@ const StyledInput = styled.input`
   cursor: auto;
   border: none;
   opacity: 0.5;
+  :focus-visible {
+    outline: none;
+  }
 `;
 
-const Input = ({ inputRef, placeholder, handleChange }) => {
+const Input = ({ placeholder, handleChange }) => {
   return (
     <StyledInput
       type="text"

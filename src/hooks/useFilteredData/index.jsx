@@ -5,6 +5,8 @@ const LIST_COUNTRIES = gql`
     countries {
       name
       code
+      emoji
+      capital
       continent {
         name
       }
@@ -54,8 +56,10 @@ const useFilteredData = (inputContent, showByContinent) => {
       !errorLang
     ) {
       const res = inputContent
-        ? data.countries.filter((c) => {
-            return c.name.toLowerCase().startsWith(inputContent.toLowerCase());
+        ? data.countries.filter((country) => {
+            return country.name
+              .toLowerCase()
+              .startsWith(inputContent.toLowerCase());
           })
         : data.countries;
       if (showByContinent) {
@@ -85,7 +89,7 @@ const useFilteredData = (inputContent, showByContinent) => {
     loadingLang,
     showByContinent,
   ]);
-  return { results, loading, error };
+  return { results, loading };
 };
 
 export default useFilteredData;
