@@ -7,6 +7,8 @@ import gmail from "./../../assets/gmail.svg";
 const StyledFooter = styled.footer`
   background-color: #e8ccbf;
   padding-top: 7em;
+  margin-top: 25em;
+  padding-top: 10em;
 `;
 
 const StyledSocialMediaContainer = styled.div`

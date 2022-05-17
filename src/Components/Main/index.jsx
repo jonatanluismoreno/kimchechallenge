@@ -9,7 +9,7 @@ import Loading from "../Loading";
 const StyledMain = styled.main`
   background-color: #cfb9a5;
   width: 100%;
-  padding: auto;
+  height: 100%;
 `;
 
 const Main = ({ loading, toggleSearchBy, content }) => {
