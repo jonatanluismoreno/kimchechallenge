@@ -6,10 +6,7 @@ import Main from "./Components/Main";
 function App() {
   const [inputContent, setInputContent] = useState("");
   const [showByContinent, setShowByContinent] = useState(true);
-  const { results, error, loading } = useFilteredData(
-    inputContent,
-    showByContinent
-  );
+  const { results, loading } = useFilteredData(inputContent, showByContinent);
 
   const toggleSearchBy = () => {
     setShowByContinent(!showByContinent);
@@ -19,7 +16,6 @@ function App() {
     <>
       <Header setInputContent={setInputContent} />
       <Main
-        error={error}
         loading={loading}
         toggleSearchBy={toggleSearchBy}
         content={results}
