@@ -33,6 +33,8 @@ const Form = ({ setInputContent }) => {
     if (event.target.value) {
       setInputContent(event.target.value);
       console.log(event.target.value);
+    } else {
+      setInputContent("");
     }
   };
   return (
