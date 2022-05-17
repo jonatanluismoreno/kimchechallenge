@@ -52,7 +52,7 @@ const Footer = () => {
         </StyledSocialMedia>
         <StyledSocialMedia href="https://www.linkedin.com/in/jonatan-moreno-39651b215/">
           <StyledSocialMediaImage src={linkedin} />
-          <StyledSocialMediaTitle>LINKEDINL</StyledSocialMediaTitle>
+          <StyledSocialMediaTitle>LINKEDIN</StyledSocialMediaTitle>
         </StyledSocialMedia>
         <StyledSocialMedia href="https://github.com/jonatanluismoreno">
           <StyledSocialMediaImage src={github} />
