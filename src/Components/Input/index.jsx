@@ -10,9 +10,12 @@ const StyledInput = styled.input`
   cursor: auto;
   border: none;
   opacity: 0.5;
+  :focus-visible {
+    outline: none;
+  }
 `;
 
-const Input = ({ inputRef, placeholder, handleChange }) => {
+const Input = ({ placeholder, handleChange }) => {
   return (
     <StyledInput
       type="text"
