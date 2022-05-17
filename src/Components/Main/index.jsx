@@ -1,18 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+
 import ButtonContainer from "../ButtonContainer";
-import CardsContainer from "../CardsContainer";
+import CategoryContainer from "../CardsContainer";
+import Footer from "../Footer";
+import Loading from "../Loading";
 
-const StyledMain = styled.main``;
+const StyledMain = styled.main`
+  background-color: #cfb9a5;
+  width: 100%;
+  padding: auto;
+`;
 
-const Main = ({ error, loading, toggleSearchBy, content }) => {
-  if (loading || error) {
-    return <p>{error ? error.message : "Loading..."}</p>;
-  }
+const Main = ({ loading, toggleSearchBy, content }) => {
   return (
     <StyledMain>
-      <ButtonContainer handleButton={toggleSearchBy} />
-      <CardsContainer content={content} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <ButtonContainer handleButton={toggleSearchBy} />
+          <CategoryContainer content={content} />
+          <Footer />
+        </>
+      )}
     </StyledMain>
   );
 };
