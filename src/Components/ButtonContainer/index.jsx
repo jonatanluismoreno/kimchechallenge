@@ -5,9 +5,9 @@ import Button from "../Button";
 const StyledButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  padding: 55px 0;
   gap: 10px;
 `;
 

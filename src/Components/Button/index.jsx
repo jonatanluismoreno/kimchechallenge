@@ -2,13 +2,20 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9)), #1747f5;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background: #81968f;
   border-radius: 8px;
   width: 10em;
   height: 3em;
   border: 0;
   cursor: pointer;
   font-size: 17px;
+  opacity: 0.8;
+  :hover {
+    opacity: 1;
+  }
 `;
 
 const Button = ({ handleButton, children }) => {
