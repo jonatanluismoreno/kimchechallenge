@@ -11,11 +11,11 @@ const StyledButtonContainer = styled.div`
   gap: 10px;
 `;
 
-const ButtonContainer = ({ handleButton }) => {
+const ButtonContainer = ({ setShowByContinent }) => {
   return (
     <StyledButtonContainer>
-      <Button handleButton={handleButton}>Continent</Button>
-      <Button handleButton={handleButton}>Language</Button>
+      <Button handleButton={() => setShowByContinent(true)}>Continent</Button>
+      <Button handleButton={() => setShowByContinent(false)}>Language</Button>
     </StyledButtonContainer>
   );
 };
