@@ -5,13 +5,13 @@ const StyledButton = styled.button`
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
   color: #ffffff;
-  background: #81968f;
+  background: #91735f;
   border-radius: 8px;
-  width: 10em;
-  height: 3em;
+  width: 12em;
+  height: 3.5em;
   border: 0;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 20px;
   opacity: 0.8;
   :hover {
     opacity: 1;
