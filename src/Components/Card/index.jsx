@@ -33,7 +33,7 @@ const bounceInUp = keyframes`from,
 
 const StyledCardContainer = styled.li`
   animation-name: ${bounceInUp};
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   display: flex;
   align-items: center;
 `;
