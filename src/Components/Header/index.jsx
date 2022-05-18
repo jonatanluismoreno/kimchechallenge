@@ -7,7 +7,9 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #e8ccbf;
+  padding: 4em 0;
+  background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/09/16/49901-map-world.jpg);
+  background-size: 95vw;
 `;
 
 const StyledTitle = styled.h1`
@@ -17,11 +19,11 @@ const StyledTitle = styled.h1`
   color: #5b453d;
 `;
 
-const Header = ({ setInputContent }) => {
+const Header = ({ setInputContent, inputContent }) => {
   return (
     <StyledHeader>
       <StyledTitle>Country Finder</StyledTitle>
-      <Form setInputContent={setInputContent} />
+      <Form setInputContent={setInputContent} inputContent={inputContent} />
     </StyledHeader>
   );
 };
