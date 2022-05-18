@@ -31,55 +31,79 @@ const bounceInUp = keyframes`from,
     }
     `;
 
-const StyledCardContainer = styled.div`
+const StyledCardContainer = styled.li`
   animation-name: ${bounceInUp};
   animation-duration: 1.5s;
   display: flex;
   align-items: center;
 `;
 
-const StyledCard = styled.li`
+const StyledCard = styled.div`
   font-family: "Titillium Web", sans-serif;
-  width: 11em;
-  height: 3.5em;
+  width: 13.5em;
   list-style-type: none;
-  background: #959f95;
+  background: #c4c2a2;
   border-radius: 4px;
-  color: #ffffff;
+  color: #5b453d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0.8;
+  border-radius: 25px 25px 25px 25px;
   :hover {
     opacity: 1;
   }
 `;
+const StyledCardTop = styled.div`
+  width: 100%;
+  background: linear-gradient(89.87deg, rgb(159, 126, 105), rgb(210, 187, 160));
+  border-radius: 25px 25px 0px 0px;
+  padding-top: 0.5em;
+`;
+
+const StyledCardBottom = styled.div`
+  padding: 0.5em 0;
+`;
 
 const StyledCountry = styled.h3`
   text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin: 0;
 `;
 
 const StyledCapital = styled.h3`
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
   margin: 0;
 `;
 
-const Card = ({ name, emoji, capital }) => {
-  console.log(emoji);
+const StyledFlag = styled.img`
+  width: 100%;
+  height: 7em;
+`;
+
+const Card = ({ name, emoji, capital, code }) => {
   return (
     <StyledCardContainer>
       <StyledCard>
-        <StyledCountry>
-          {name}
-          {"  "}
-          {emoji}
-        </StyledCountry>
-        <StyledCapital>{capital}</StyledCapital>
+        <StyledCardTop>
+          <StyledCountry>
+            {name}
+            {"  "}
+            {emoji}
+          </StyledCountry>
+          <StyledFlag
+            alt=""
+            src={`https://www.banderas-mundo.es/data/flags/w580/${code
+              .toString()
+              .toLowerCase()}.webp`}
+          />
+        </StyledCardTop>
+        <StyledCardBottom>
+          <StyledCapital>{capital}</StyledCapital>
+        </StyledCardBottom>
       </StyledCard>
     </StyledCardContainer>
   );
