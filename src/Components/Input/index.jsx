@@ -10,18 +10,19 @@ const StyledInput = styled.input`
   letter-spacing: -0.087px;
   cursor: auto;
   border: none;
-  opacity: 0.5;
+  opacity: 0.8;
   :focus-visible {
     outline: none;
   }
 `;
 
-const Input = ({ placeholder, handleChange }) => {
+const Input = ({ placeholder, handleChange, inputContent }) => {
   return (
     <StyledInput
       type="text"
       placeholder={placeholder}
       onChange={handleChange}
+      value={inputContent}
     />
   );
 };
