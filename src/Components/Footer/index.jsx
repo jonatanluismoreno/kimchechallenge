@@ -5,7 +5,7 @@ import linkedin from "./../../assets/linkedin.svg";
 import gmail from "./../../assets/gmail.svg";
 
 const StyledFooter = styled.footer`
-  background-color: #e8ccbf;
+  background-color: #91735f;
   padding-top: 7em;
   margin-top: 25em;
   padding-top: 10em;
