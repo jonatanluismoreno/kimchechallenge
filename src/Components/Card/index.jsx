@@ -33,7 +33,7 @@ const bounceInUp = keyframes`from,
 
 const StyledCardContainer = styled.li`
   animation-name: ${bounceInUp};
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   display: flex;
   align-items: center;
 `;
@@ -95,7 +95,7 @@ const Card = ({ name, emoji, capital, code }) => {
             {emoji}
           </StyledCountry>
           <StyledFlag
-            alt=""
+            alt={`Flag of ${name}`}
             src={`https://www.banderas-mundo.es/data/flags/w580/${code
               .toString()
               .toLowerCase()}.webp`}

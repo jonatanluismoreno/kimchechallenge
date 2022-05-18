@@ -37,7 +37,7 @@ const StyledSocialMediaTitle = styled.h3`
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #5b453d;
+  color: #1f1a18;
 `;
 
 const StyledSocialMediaImage = styled.img``;

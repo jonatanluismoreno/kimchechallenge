@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import ButtonContainer from "../ButtonContainer";
-import CategoryContainer from "../CardsContainer";
+import CategoryContainer from "../CategoryContainer";
 import Footer from "../Footer";
 import Loading from "../Loading";
 

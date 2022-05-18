@@ -29,7 +29,8 @@ En referencia a la pregunta formulada, separemos el problema a partir de los dat
 
 - En base a la cantidad de filas, es posible que existan asistencias que podrían agruparse por algún tipo de relación, como por ejemplo, por franjas horarias, asignatura o días de la semana. Estas podrían conformar tablas independientes, evitando recorrer datos innecesarios.
 - Teniendo en cuenta la cantidad de datos relacionados con el niño (y con el resto de niños), cabría la posibilidad de reducir el tiempo que toma el usuario en la aplicación si se utiliza una database NoSQL, pudiendo así lidiar con los datos relacionados con los niños en paralelo, (abriendo la posibilidad a trabajar con big data), debido a la optimización que representa una BDD NoSQL (como MongoDB) por sobre una SQL.
-- Como el tiempo de uso no podría ser 0, también evaluaría opciones tales como:
+
+  Como el tiempo de uso no podría ser 0, también evaluaría opciones tales como:
 
 * Buscar un algoritmo de búsqueda qué, en conformidad con los datos almacenados, permita reducir el tiempo de uso.
 * Debbugear la lógica del backend, para ver si hay algún error en la base de datos o datos innecesarios y/o repetidos.
