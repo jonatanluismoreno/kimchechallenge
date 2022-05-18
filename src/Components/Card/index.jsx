@@ -95,7 +95,7 @@ const Card = ({ name, emoji, capital, code }) => {
             {emoji}
           </StyledCountry>
           <StyledFlag
-            alt=""
+            alt={`Flag of ${name}`}
             src={`https://www.banderas-mundo.es/data/flags/w580/${code
               .toString()
               .toLowerCase()}.webp`}
