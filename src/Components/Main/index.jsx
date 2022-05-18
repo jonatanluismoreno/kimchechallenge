@@ -7,19 +7,19 @@ import Footer from "../Footer";
 import Loading from "../Loading";
 
 const StyledMain = styled.main`
-  background-color: #cfb9a5;
+  background-color: #c6ac93;
   width: 100%;
   height: 100%;
 `;
 
-const Main = ({ loading, toggleSearchBy, content }) => {
+const Main = ({ loading, setShowByContinent, content }) => {
   return (
     <StyledMain>
       {loading ? (
         <Loading />
       ) : (
         <>
-          <ButtonContainer handleButton={toggleSearchBy} />
+          <ButtonContainer setShowByContinent={setShowByContinent} />
           <CategoryContainer content={content} />
           <Footer />
         </>

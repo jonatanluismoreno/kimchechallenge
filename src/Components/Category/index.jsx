@@ -34,6 +34,7 @@ const Category = ({ name, countries, id }) => {
             key={b.name}
             emoji={b.emoji}
             capital={b.capital}
+            code={b.code}
           />
         ))}
       </StyledCategory>
