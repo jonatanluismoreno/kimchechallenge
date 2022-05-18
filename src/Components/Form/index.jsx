@@ -30,12 +30,9 @@ const StyledImage = styled.img`
 const Form = ({ setInputContent, inputContent }) => {
   const handleChange = (event) => {
     event.preventDefault();
-    if (event.target.value) {
-      setInputContent(event.target.value);
-      console.log(event.target.value);
-    } else {
-      setInputContent("");
-    }
+    event.target.value
+      ? setInputContent(event.target.value)
+      : setInputContent("");
   };
   return (
     <StyledForm>
