@@ -18,7 +18,7 @@ const StyledCategory = styled.ul`
 const StyledSubtitle = styled.h2`
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   color: #5b453d;
 `;
